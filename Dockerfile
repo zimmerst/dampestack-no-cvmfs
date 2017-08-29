@@ -18,6 +18,6 @@ RUN echo "export PATH=/apps:${PATH}" >> /root/.bashrc
 RUN yum -y install git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel && yum clean all
 ### more prerequisites
 RUN yum -y install mesa-libGLU-devel libXmu-devel && yum clean all
-RUN echo "source /cvmfs/dampe.cern.ch/rhel6-64/etc/setup.sh" >> /root/.bashrc
+###RUN echo "source /cvmfs/dampe.cern.ch/rhel6-64/etc/setup.sh" >> /root/.bashrc
 ADD docker.cfg /DmpWorkflow/DmpWorkflow/config/settings.cfg
 ENTRYPOINT ["/bin/bash","--login","-c"]
